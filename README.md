@@ -1,4 +1,4 @@
-# 🩺 Veda-Lens: Longitudinal Clinical Intelligence & Medical Copilot
+﻿# 🩺 Veda-Lens: Longitudinal Clinical Intelligence & Medical Copilot
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![React 18](https://img.shields.io/badge/React_18-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -20,7 +20,7 @@ Veda-Lens solves this by synthesizing unstructured clinical encounters into an *
 
 ## 🔬 Core Architectural Capabilities
 
-`
+```
                   ┌────────────────────────────────────────────────────────┐
                   │                 Veda-Lens Web Portal                   │
                   │        (React 18 · TypeScript · Vite · Tailwind)       │
@@ -50,7 +50,7 @@ Veda-Lens solves this by synthesizing unstructured clinical encounters into an *
                   │             Persistent Storage Tier (Async)            │
                   │          SQLite / aiosqlite · Audit Logs · Vault       │
                   └────────────────────────────────────────────────────────┘
-`
+```
 
 ### 1. ⏱️ Longitudinal Patient Trajectory Engine
 - Unifies outpatient visits, inpatient admissions, surgical procedures, and diagnostic labs into a coherent chronological timeline.
@@ -69,17 +69,17 @@ Veda-Lens solves this by synthesizing unstructured clinical encounters into an *
 
 ### 4. ⚡ High-Throughput Async Architecture
 - Clean Domain-Driven Design (DDD) with decoupled modular boundaries:
-  - patients: Medical Record Number (MRN) lifecycle, demographics, and clinical status.
-  - ingestion: Asynchronous processing of incoming diagnostic files, PDFs, and scanned charts.
-  - 	imeline: Event extraction, chronology assembly, and severity weighting.
-  - medicine_engine: Pharmacological database lookup, interactions, and dosage checks.
-  - ssistant: Grounded clinical conversational engine with session context management.
+  - `patients`: Medical Record Number (MRN) lifecycle, demographics, and clinical status.
+  - `ingestion`: Asynchronous processing of incoming diagnostic files, PDFs, and scanned charts.
+  - `timeline`: Event extraction, chronology assembly, and severity weighting.
+  - `medicine_engine`: Pharmacological database lookup, interactions, and dosage checks.
+  - `assistant`: Grounded clinical conversational engine with session context management.
 
 ---
 
 ## 🗂️ Project Organization
 
-`	ext
+```text
 Veda-Lens/
 ├── backend/
 │   ├── app/
@@ -111,7 +111,7 @@ Veda-Lens/
     │   └── theme/                 # Custom Tailwind theme & color palettes
     ├── package.json               # Frontend dependencies & scripts
     └── vite.config.ts             # Vite build configuration
-`
+```
 
 ---
 
@@ -119,68 +119,67 @@ Veda-Lens/
 
 ### Prerequisites
 - **Python:** 3.10 or 3.11
-- **Node.js:** 18.x or 20.x (with 
-pm or pnpm)
+- **Node.js:** 18.x or 20.x (with `npm` or `pnpm`)
 
 ---
 
 ### Backend Setup
 
 1. **Navigate to the backend directory:**
-   `ash
+   ```bash
    cd backend
-   `
+   ```
 
 2. **Create and activate a virtual environment:**
-   `ash
+   ```bash
    python -m venv venv
    # On Windows:
    venv\Scripts\activate
    # On Linux/macOS:
    source venv/bin/activate
-   `
+   ```
 
 3. **Install dependencies:**
-   `ash
+   ```bash
    pip install -r requirements.txt
-   `
+   ```
 
 4. **Set up environment variables:**
-   `ash
+   ```bash
    cp .env.example .env
-   `
-   *Configure your SECRET_KEY, DATABASE_URL, and optional OPENAI_API_KEY.*
+   ```
+   *Configure your `SECRET_KEY`, `DATABASE_URL`, and optional `OPENAI_API_KEY`.*
 
 5. **Initialize database and seed demo clinical records:**
-   `ash
+   ```bash
    python build_backend.py
-   `
+   ```
 
 6. **Launch the FastAPI development server:**
-   `ash
+   ```bash
    uvicorn app.main:create_app --factory --reload --port 8000
-   `
-   *Interactive API documentation is accessible at http://localhost:8000/docs.*
+   ```
+   *Interactive API documentation is accessible at `http://localhost:8000/docs`.*
 
 ---
 
 ### Frontend Setup
 
 1. **Navigate to the frontend directory:**
-   `ash
+   ```bash
    cd ../frontend
-   `
+   ```
 
 2. **Install frontend dependencies:**
-   `ash
+   ```bash
    npm install
-   `
+   ```
 
 3. **Start the Vite development server:**
-   `ash
+   ```bash
    npm run dev
-   `
-   *The application interface will launch at http://localhost:5173.*
+   ```
+   *The application interface will launch at `http://localhost:5173`.*
 
 ---
 
